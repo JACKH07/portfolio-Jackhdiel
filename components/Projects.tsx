@@ -11,10 +11,12 @@ const projects = [
       "Intégration complète de parcours de paiement sur la plateforme MAXIT d'Orange Money Côte d'Ivoire. Développement du Backend et Frontend pour les paiements écoles (BURIDA) et amélioration de l'expérience utilisateur.",
     tags: ["Node.js", "Express", "JavaScript", "XML", "JSON", "API"],
     color: "orange",
-    icon: "💳",
+    icon: "",
     featured: true,
     context: "Orange Money CI — Production",
     highlights: ["Paiements à fort volume", "Sécurité des transactions", "Expérience utilisateur"],
+    link: null,
+    github: null,
   },
   {
     title: "Application de Gestion",
@@ -23,34 +25,27 @@ const projects = [
       "Conception et développement d'une application de gestion complète pour l'entreprise Les Technologies Informatique Abobo. Gestion des ressources, maintenance et formation des utilisateurs.",
     tags: ["Python", "Django", "MySQL", "API REST", "Git"],
     color: "blue",
-    icon: "🏢",
+    icon: "",
     featured: true,
     context: "LTI Abobo — Production",
     highlights: ["Gestion des ressources", "API REST", "Base de données MySQL"],
+    link: null,
+    github: null,
   },
-  {
-    title: "CONNECT CCI",
-    subtitle: "Projet Personnel",
-    description:
-      "Application web permettant la génération automatique de formulaires, la création de documents PDF et la génération de QR codes dynamiques pour la gestion des identités et des accès.",
-    tags: ["Python", "Django", "PDF", "QR Code", "JavaScript"],
-    color: "emerald",
-    icon: "🔗",
-    featured: true,
-    context: "Projet Personnel",
-    highlights: ["Génération PDF", "QR Code dynamique", "Formulaire intelligent"],
-  },
+  
   {
     title: "Site Vitrine Daymond",
-    subtitle: "Daymond",
+    subtitle: "Daymond — Premier fournisseur dropshipping en Afrique",
     description:
-      "Conception d'un site vitrine mobile responsive connecté à l'application Daymond. Focus sur l'UX mobile-first et les performances d'affichage.",
+      "Conception du site vitrine mobile de Daymond, premier fournisseur spécialisé en dropshipping en Afrique. Application mobile connectée permettant aux vendeurs de gagner des commissions sur chaque vente via leur téléphone.",
     tags: ["Angular", "TypeScript", "HTML", "CSS", "Responsive"],
     color: "violet",
     icon: "📱",
-    featured: false,
+    featured: true,
     context: "Daymond — Production",
-    highlights: ["Mobile-first", "Angular", "UX/UI"],
+    highlights: ["Mobile-first", "Angular", "Dropshipping Afrique"],
+    link: "https://daymond.fr/index.html",
+    github: null,
   },
   {
     title: "Intégration API REST",
@@ -63,6 +58,8 @@ const projects = [
     featured: false,
     context: "Projets Professionnels",
     highlights: ["Documentation API", "Tests Postman", "Architecture REST"],
+    link: null,
+    github: null,
   },
 ];
 
@@ -172,12 +169,36 @@ export default function Projects() {
                   </div>
                 </div>
                 <div className="flex gap-1.5">
-                  <button className="w-7 h-7 rounded-lg bg-white/5 flex items-center justify-center text-slate-500 hover:text-white hover:bg-white/10 transition-colors">
-                    <GithubIcon size={13} />
-                  </button>
-                  <button className="w-7 h-7 rounded-lg bg-white/5 flex items-center justify-center text-slate-500 hover:text-white hover:bg-white/10 transition-colors">
-                    <ExternalLink size={13} />
-                  </button>
+                  {project.github ? (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Voir sur GitHub"
+                      className="w-7 h-7 rounded-lg bg-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
+                    >
+                      <GithubIcon size={13} />
+                    </a>
+                  ) : (
+                    <span className="w-7 h-7 rounded-lg bg-white/5 flex items-center justify-center text-slate-700 cursor-not-allowed">
+                      <GithubIcon size={13} />
+                    </span>
+                  )}
+                  {project.link ? (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Voir le projet en ligne"
+                      className="w-7 h-7 rounded-lg bg-violet-500/20 flex items-center justify-center text-violet-400 hover:text-white hover:bg-violet-500/40 transition-colors"
+                    >
+                      <ExternalLink size={13} />
+                    </a>
+                  ) : (
+                    <span className="w-7 h-7 rounded-lg bg-white/5 flex items-center justify-center text-slate-700 cursor-not-allowed">
+                      <ExternalLink size={13} />
+                    </span>
+                  )}
                 </div>
               </div>
 
