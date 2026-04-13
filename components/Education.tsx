@@ -21,6 +21,7 @@ const education = [
     color: "violet",
     current: false,
   },
+ 
   {
     degree: "Licence 3 Professionnelle",
     field: "Informatique — Génie Logiciel",
@@ -50,6 +51,23 @@ const education = [
   },
 ];
 
+const certification = [
+  {
+    degree: "Certification MongoDB",
+    field: "MongoDB",
+    school: "alison.com",
+    period: "2024 — 2025",
+    location: "Abidjan, Côte d'Ivoire",
+  },
+  {
+    degree: "Certification IA Generative",
+    field: "IA Generative",
+    school: "alison.com",
+    period: "Du 6 avril au 13 mai 2025",
+    location: "Abidjan, Côte d'Ivoire",
+  },
+  
+];
 const colorMap: Record<string, { badge: string; border: string; dot: string; line: string }> = {
   blue: {
     badge: "bg-blue-500/10 text-blue-400 border-blue-500/20",

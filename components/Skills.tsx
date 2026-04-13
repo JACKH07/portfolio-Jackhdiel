@@ -7,7 +7,7 @@ const skillCategories = [
     title: "Backend",
     color: "blue",
     skills: [
-      { name: "Python / Django", level: 85, years: "2 ans" },
+      { name: "Python / Django", level: 85, years: "3 ans" },
       { name: "Node.js / Express", level: 80, years: "1 an" },
       { name: "API REST / Intégration", level: 88, years: "2 ans" },
       { name: "Spring Boot", level: 50, years: "Notions" },
@@ -18,7 +18,7 @@ const skillCategories = [
     color: "violet",
     skills: [
       { name: "JavaScript", level: 82, years: "2 ans" },
-      { name: "Angular", level: 75, years: "1 an" },
+      { name: "React Native", level: 75, years: "1 an" },
       { name: "HTML / CSS", level: 85, years: "2 ans" },
     ],
   },
