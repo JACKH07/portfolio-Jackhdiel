@@ -58,8 +58,8 @@ const projects = [
     featured: true,
     context: "Démo en ligne — Vercel",
     highlights: ["Production", "Interface moderne", "Hébergement Vercel"],
-    link: "https://church-manager-ir5m.vercel.app/",
-    github: null,
+    link: "https://church-manager-ir5m.vercel.app",
+    github: "https://github.com/JACKH07/ChurchManager",
   },
   {
     title: "Intégration API REST",
