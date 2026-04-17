@@ -48,6 +48,20 @@ const projects = [
     github: null,
   },
   {
+    title: "Church Manager",
+    subtitle: "Application de gestion d'église",
+    description:
+      "Application web pour la gestion d'une communauté : organisation, suivi et outils dédiés. Déployée en production sur Vercel pour un accès rapide et fiable.",
+    tags: ["Next.js", "React", "TypeScript", "Vercel", "Tailwind CSS","python","django","postgres"],
+    color: "emerald",
+    icon: "<img src='https://www.image2url.com/r2/default/images/1776455877679-dbfcfa56-a1bd-4a3e-8242-f14513056b35.png' alt='image' />",
+    featured: true,
+    context: "Démo en ligne — Vercel",
+    highlights: ["Production", "Interface moderne", "Hébergement Vercel"],
+    link: "https://church-manager-ir5m.vercel.app/",
+    github: null,
+  },
+  {
     title: "Intégration API REST",
     subtitle: "Projets Divers",
     description:
@@ -108,7 +122,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-24 bg-[#0a1120] relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-950/5 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-emerald-950/5 to-transparent pointer-events-none" />
       <div ref={ref} className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className={`text-center mb-12 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>

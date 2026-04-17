@@ -4,7 +4,7 @@ import { Briefcase, Calendar, ChevronRight, MapPin } from "lucide-react";
 
 const experiences = [
   {
-    company: "OMCI — Mission BURIDA",
+    company: "OMCI — Integration API Paiement BURIDA dans MAXIT",
     role: "Consultant Full Stack & Intégrateur — Orange Money CI",
     period: "Septembre — Octobre 2025",
     duration: "2 mois",
@@ -108,7 +108,7 @@ export default function Experience() {
 
   return (
     <section id="experience" className="py-24 bg-[#060d1b] relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-950/5 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-blue-950/5 to-transparent pointer-events-none" />
       <div ref={ref} className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className={`text-center mb-16 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
@@ -138,7 +138,7 @@ export default function Experience() {
                 }`}
               >
                 <div className="flex items-center gap-3">
-                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center text-white text-xs font-bold flex-shrink-0 ${colorMap[ex.color].bg}`}>
+                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center text-white text-xs font-bold shrink-0 ${colorMap[ex.color].bg}`}>
                     {ex.logo}
                   </div>
                   <div className="min-w-0">
@@ -148,7 +148,7 @@ export default function Experience() {
                     <p className="text-slate-500 text-xs truncate">{ex.role}</p>
                   </div>
                   {active === i && (
-                    <ChevronRight size={14} className="text-blue-400 flex-shrink-0 ml-auto" />
+                    <ChevronRight size={14} className="text-blue-400 shrink-0 ml-auto" />
                   )}
                 </div>
                 <div className="mt-2 flex items-center gap-2 text-xs text-slate-500">
@@ -205,7 +205,7 @@ export default function Experience() {
                 <ul className="space-y-2">
                   {exp.missions.map((m, i) => (
                     <li key={i} className="flex items-start gap-2.5 text-slate-300 text-sm">
-                      <div className={`w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0 ${colorMap[exp.color].dot}`} />
+                      <div className={`w-1.5 h-1.5 rounded-full mt-1.5 shrink-0 ${colorMap[exp.color].dot}`} />
                       {m}
                     </li>
                   ))}

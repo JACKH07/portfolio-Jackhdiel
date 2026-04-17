@@ -4,7 +4,7 @@ import Image from "next/image";
 import { User, Target, Zap, Award, Code, Database, Globe } from "lucide-react";
 
 const stats = [
-  { value: "2+", label: "Ans d'expérience", icon: Award },
+  { value: "3+", label: "Ans d'expérience", icon: Award },
   { value: "5+", label: "Projets livrés", icon: Target },
   { value: "3+", label: "Technologies maîtrisées", icon: Code },
   { value: "2", label: "Entreprises majeures", icon: Zap },
@@ -46,7 +46,7 @@ export default function About() {
 
   return (
     <section id="about" className="py-24 bg-[#060d1b] relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-950/5 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-blue-950/5 to-transparent pointer-events-none" />
       <div
         ref={ref}
         className="max-w-6xl mx-auto px-4 sm:px-6"
@@ -70,7 +70,7 @@ export default function About() {
                 Je suis{" "}
                 <span className="text-white font-semibold">Kouakou Jackhdiel Kouame</span>,
                 un développeur Full Stack passionné avec{" "}
-                <span className="text-blue-400 font-semibold">2 ans d&apos;expérience</span>{" "}
+                <span className="text-blue-400 font-semibold">3 ans d&apos;expérience</span>{" "}
                 basé à Abidjan, Côte d&apos;Ivoire.
               </p>
               <p>
@@ -111,7 +111,7 @@ export default function About() {
                     key={i}
                     className="flex items-start gap-3 p-3 rounded-xl bg-white/2 border border-white/5 hover:border-white/10 transition-colors"
                   >
-                    <div className={`w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 border ${colorMap[h.color as keyof typeof colorMap]}`}>
+                    <div className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 border ${colorMap[h.color as keyof typeof colorMap]}`}>
                       <Icon size={16} />
                     </div>
                     <div>
@@ -136,7 +136,7 @@ export default function About() {
                   className="object-cover object-top"
                   sizes="160px"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#060d1b]/40 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-[#060d1b]/40 to-transparent" />
               </div>
             </div>
 
@@ -149,7 +149,7 @@ export default function About() {
                     key={i}
                     className="glass-card rounded-2xl p-6 text-center hover:border-blue-500/20 transition-all duration-300 group"
                   >
-                    <div className="w-10 h-10 mx-auto mb-3 rounded-xl bg-gradient-to-br from-blue-500/20 to-violet-500/20 flex items-center justify-center group-hover:from-blue-500/30 group-hover:to-violet-500/30 transition-colors">
+                    <div className="w-10 h-10 mx-auto mb-3 rounded-xl bg-linear-to-br from-blue-500/20 to-violet-500/20 flex items-center justify-center group-hover:from-blue-500/30 group-hover:to-violet-500/30 transition-colors">
                       <Icon size={18} className="text-blue-400" />
                     </div>
                     <p className="text-3xl font-bold gradient-text">{stat.value}</p>

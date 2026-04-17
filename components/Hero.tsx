@@ -125,7 +125,7 @@ export default function Hero() {
             {/* Social Links */}
             <div className="flex items-center gap-3 pt-2">
               <a
-                href="https://github.com/jackhdiel"
+                href="https://github.com/JACKH07"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-200"
@@ -133,7 +133,7 @@ export default function Hero() {
               <GithubIcon size={18} />
             </a>
             <a
-              href="https://linkedin.com/in/jackhdiel-kouame"
+              href="https://linkedin.com/in/jackhdiel-kouakou-45494924b"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-200"
@@ -141,7 +141,7 @@ export default function Hero() {
               <LinkedinIcon size={18} />
               </a>
               <a
-                href="mailto:jackhdiel.kouame@gmail.com"
+                href="mailto:kouakoujackhdielkouame@gmail.com"
                 className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-200"
               >
                 <Mail size={18} />

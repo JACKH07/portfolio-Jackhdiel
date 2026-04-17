@@ -22,7 +22,7 @@ export default function Footer() {
           {/* Links */}
           <div className="flex items-center gap-2">
             <a
-              href="https://github.com/jackhdiel"
+              href="https://github.com/JACKH07"
               target="_blank"
               rel="noopener noreferrer"
               className="w-9 h-9 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/10 transition-all"
@@ -30,7 +30,7 @@ export default function Footer() {
               <GithubIcon size={16} />
             </a>
             <a
-              href="https://linkedin.com/in/jackhdiel-kouame"
+              href="https://linkedin.com/in/jackhdiel-kouakou-45494924b"
               target="_blank"
               rel="noopener noreferrer"
               className="w-9 h-9 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/10 transition-all"
@@ -38,7 +38,7 @@ export default function Footer() {
               <LinkedinIcon size={16} />
             </a>
             <a
-              href="mailto:jackhdiel.kouame@gmail.com"
+              href="mailto:kouakoujackhdielkouame@gmail.com"
               className="w-9 h-9 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/10 transition-all"
             >
               <Mail size={16} />

@@ -11,7 +11,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Kouakou Jackhdiel Kouame | Développeur Full Stack",
   description:
-    "Développeur Full Stack avec 2 ans d'expérience en Python/Django, Node.js et intégration API. Basé en Côte d'Ivoire. Expérience chez Orange Money CI (OMCI).",
+    "Développeur Full Stack avec 3 ans d'expérience en Python/Django, Node.js et intégration API. Basé en Côte d'Ivoire. Expérience chez Orange Money CI (OMCI).",
   keywords: [
     "Développeur Full Stack",
     "Python Django",
@@ -24,31 +24,23 @@ export const metadata: Metadata = {
     "OMCI",
     "MAXIT",
   ],
-  authors: [{ name: "Kouakou Jackhdiel Kouame" }],
+  authors: [{ name: "Kouakou Jackhdiel Kouame elioenaî" }],
   openGraph: {
-    title: "Kouakou Jackhdiel Kouame | Développeur Full Stack",
+    title: "Kouakou Jackhdiel Kouame elioenaî | Développeur Full Stack",
     description:
-      "Je conçois des applications performantes, sécurisées et centrées sur l'utilisateur.",
+      "Je conçois des applications performantes sur mesure, sécurisées et centrées sur l'utilisateur.",
     type: "website",
     locale: "fr_FR",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kouakou Jackhdiel Kouame | Développeur Full Stack",
+    title: "Kouakou Jackhdiel Kouame elioenaî | Développeur Full Stack",
     description:
-      "Développeur Full Stack basé en Côte d'Ivoire. Python/Django, Node.js, Angular, API REST.",
-  },
-  robots: {
-    index: true,
-    follow: true,
+      "Développeur Full Stack basé en Côte d'Ivoire. Python/Django, Node.js, React native, Node.js, API REST.",
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" className="scroll-smooth">
       <head>

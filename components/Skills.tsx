@@ -10,7 +10,6 @@ const skillCategories = [
       { name: "Python / Django", level: 85, years: "3 ans" },
       { name: "Node.js / Express", level: 80, years: "1 an" },
       { name: "API REST / Intégration", level: 88, years: "2 ans" },
-      { name: "", level: 50, years: "Notions" },
     ],
   },
   {
