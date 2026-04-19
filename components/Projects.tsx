@@ -1,9 +1,28 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import Image, { type StaticImageData } from "next/image";
 import { FolderOpen, ExternalLink, Tag } from "lucide-react";
 import { GithubIcon } from "./icons";
+import churchManagerLogo from "@/assets/logochuch.png";
 
-const projects = [
+type ProjectColor = "orange" | "blue" | "emerald" | "violet";
+
+type ProjectCard = {
+  title: string;
+  subtitle: string;
+  description: string;
+  tags: string[];
+  color: ProjectColor;
+  icon: string;
+  featured: boolean;
+  context: string;
+  highlights: string[];
+  link: string | null;
+  github: string | null;
+  logo?: StaticImageData;
+};
+
+const projects: ProjectCard[] = [
   {
     title: "MAXIT — Système de Paiement",
     subtitle: "Orange Money CI",
@@ -40,7 +59,7 @@ const projects = [
       "Conception du site vitrine mobile de Daymond, premier fournisseur spécialisé en dropshipping en Afrique. Application mobile connectée permettant aux vendeurs de gagner des commissions sur chaque vente via leur téléphone.",
     tags: ["Angular", "TypeScript", "HTML", "CSS", "Responsive"],
     color: "violet",
-    icon: "📱",
+    icon: "",
     featured: true,
     context: "Daymond — Production",
     highlights: ["Mobile-first", "Angular", "Dropshipping Afrique"],
@@ -52,9 +71,19 @@ const projects = [
     subtitle: "Application de gestion d'église",
     description:
       "Application web pour la gestion d'une communauté : organisation, suivi et outils dédiés. Déployée en production sur Vercel pour un accès rapide et fiable.",
-    tags: ["Next.js", "React", "TypeScript", "Vercel", "Tailwind CSS","python","django","postgres"],
+    tags: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Vercel",
+      "Tailwind CSS",
+      "Python",
+      "Django",
+      "PostgreSQL",
+    ],
     color: "emerald",
-    icon: "https://www.image2url.com/r2/default/images/1776455877679-dbfcfa56-a1bd-4a3e-8242-f14513056b35.png",
+    icon: "",
+    logo: churchManagerLogo,
     featured: true,
     context: "Démo en ligne — Vercel",
     highlights: ["Production", "Interface moderne", "Hébergement Vercel"],
@@ -172,8 +201,22 @@ export default function Projects() {
             >
               {/* Header */}
               <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <div className="text-2xl">{project.icon}</div>
+                <div className="flex items-center gap-3 min-w-0">
+                  {project.logo ? (
+                    <div className="relative h-11 w-11 shrink-0 rounded-xl overflow-hidden bg-white/10 border border-white/15 ring-1 ring-white/5">
+                      <Image
+                        src={project.logo}
+                        alt={`${project.title} — logo`}
+                        fill
+                        className="object-contain p-1"
+                        sizes="44px"
+                      />
+                    </div>
+                  ) : project.icon ? (
+                    <div className="text-2xl shrink-0">{project.icon}</div>
+                  ) : (
+                    <div className="h-11 w-11 shrink-0 rounded-xl bg-white/5 border border-white/10" aria-hidden />
+                  )}
                   <div>
                     {project.featured && (
                       <span className="inline-block px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs mb-1">
