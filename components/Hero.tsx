@@ -107,7 +107,7 @@ export default function Hero() {
                 onClick={() => {
                   document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="group px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-violet-600 text-white font-semibold hover:from-blue-600 hover:to-violet-700 transition-all duration-200 shadow-lg hover:shadow-blue-500/30 flex items-center gap-2"
+                className="group px-6 py-3 rounded-xl bg-linear-to-r from-blue-500 to-violet-600 text-white font-semibold hover:from-blue-600 hover:to-violet-700 transition-all duration-200 shadow-lg hover:shadow-blue-500/30 flex items-center gap-2"
               >
                 Voir mes projets
                 <ArrowDown size={16} className="group-hover:translate-y-1 transition-transform" />
@@ -155,12 +155,12 @@ export default function Hero() {
               {/* Avatar circle */}
               <div className="relative w-72 h-72 sm:w-80 sm:h-80">
                 {/* Rotating gradient ring */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-violet-600 to-emerald-500 animate-spin" style={{ animationDuration: "8s", padding: "3px" }}>
+                <div className="absolute inset-0 rounded-full bg-linear-to-r from-blue-500 via-violet-600 to-emerald-500 animate-spin" style={{ animationDuration: "8s", padding: "3px" }}>
                   <div className="w-full h-full rounded-full bg-[#060d1b]" />
                 </div>
 
                 {/* Inner content - Photo de profil */}
-                <div className="absolute inset-2 rounded-full bg-gradient-to-br from-[#0d1526] to-[#111827] flex items-center justify-center border border-white/5 overflow-hidden">
+                <div className="absolute inset-2 rounded-full bg-linear-to-br from-[#0d1526] to-[#111827] flex items-center justify-center border border-white/5 overflow-hidden">
                   <Image
                     src="/profile.png"
                     alt="Kouakou Jackhdiel Kouame — Développeur Full Stack"

@@ -54,7 +54,7 @@ const projects = [
       "Application web pour la gestion d'une communauté : organisation, suivi et outils dédiés. Déployée en production sur Vercel pour un accès rapide et fiable.",
     tags: ["Next.js", "React", "TypeScript", "Vercel", "Tailwind CSS","python","django","postgres"],
     color: "emerald",
-    icon: "<img src='https://www.image2url.com/r2/default/images/1776455877679-dbfcfa56-a1bd-4a3e-8242-f14513056b35.png' alt='image' />",
+    icon: "https://www.image2url.com/r2/default/images/1776455877679-dbfcfa56-a1bd-4a3e-8242-f14513056b35.png",
     featured: true,
     context: "Démo en ligne — Vercel",
     highlights: ["Production", "Interface moderne", "Hébergement Vercel"],

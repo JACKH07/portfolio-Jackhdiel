@@ -1,6 +1,15 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import Image, { type StaticImageData } from "next/image";
 import { Layers, Cpu } from "lucide-react";
+import pythonLogo from "@/assets/Python-logo-notext.svg.png";
+import djangoLogo from "@/assets/django.png";
+import nodeLogo from "@/assets/node.js.png";
+import jsLogo from "@/assets/JavaScript.png";
+import angularLogo from "@/assets/angular.jpeg";
+import mysqlLogo from "@/assets/MySQL.png";
+import mongoLogo from "@/assets/MongoDB.png";
+import gitLogo from "@/assets/Git.jpeg";
 
 const skillCategories = [
   {
@@ -18,16 +27,16 @@ const skillCategories = [
     skills: [
       { name: "JavaScript", level: 82, years: "2 ans" },
       { name: "React Native", level: 75, years: "1 an" },
-      { name: "HTML / CSS", level: 85, years: "2 ans" },
+      { name: "HTML / CSS", level: 85, years: "5 ans" },
     ],
   },
   {
     title: "Base de données",
     color: "emerald",
     skills: [
-      { name: "MySQL / PhpMyAdmin", level: 82, years: "2 ans" },
+      { name: "MySQL / PhpMyAdmin", level: 82, years: "4 ans" },
       { name: "MongoDB", level: 65, years: "1 an" },
-      { name: "SQL (CRUD)", level: 80, years: "2 ans" },
+      { name: "SQL (CRUD)", level: 80, years: "4 ans" },
     ],
   },
   {
@@ -43,17 +52,15 @@ const skillCategories = [
   },
 ];
 
-const techStack = [
-  { name: "Python", bg: "from-blue-600 to-blue-800", text: "Py" },
-  { name: "Django", bg: "from-green-700 to-green-900", text: "Dj" },
-  { name: "Node.js", bg: "from-green-500 to-green-700", text: "Nd" },
-  { name: "Angular", bg: "from-red-600 to-red-800", text: "Ng" },
-  { name: "JavaScript", bg: "from-yellow-500 to-yellow-700", text: "JS" },
-  { name: "MySQL", bg: "from-blue-700 to-blue-900", text: "My" },
-  { name: "MongoDB", bg: "from-green-600 to-emerald-800", text: "Mg" },
-  { name: "Git", bg: "from-orange-600 to-red-700", text: "Gt" },
-  { name: "Postman", bg: "from-orange-500 to-orange-700", text: "Pm" },
-  { name: "Spring Boot", bg: "from-lime-600 to-lime-800", text: "Sp" },
+const techStack: { name: string; src: StaticImageData; alt: string }[] = [
+  { name: "Python", src: pythonLogo, alt: "Logo Python" },
+  { name: "Django", src: djangoLogo, alt: "Logo Django" },
+  { name: "Node.js", src: nodeLogo, alt: "Logo Node.js" },
+  { name: "JavaScript", src: jsLogo, alt: "Logo JavaScript" },
+  { name: "Angular", src: angularLogo, alt: "Logo Angular" },
+  { name: "MySQL", src: mysqlLogo, alt: "Logo MySQL" },
+  { name: "MongoDB", src: mongoLogo, alt: "Logo MongoDB" },
+  { name: "Git", src: gitLogo, alt: "Logo Git" },
 ];
 
 const colorMap: Record<string, { bar: string; badge: string; border: string }> = {
@@ -83,7 +90,7 @@ function SkillBar({ level, color, animate }: { level: number; color: string; ani
   return (
     <div className="relative h-1.5 bg-white/5 rounded-full overflow-hidden">
       <div
-        className={`h-full rounded-full bg-gradient-to-r ${colorMap[color].bar} transition-all duration-1000 ease-out`}
+        className={`h-full rounded-full bg-linear-to-r ${colorMap[color].bar} transition-all duration-1000 ease-out`}
         style={{ width: animate ? `${level}%` : "0%" }}
       />
     </div>
@@ -111,7 +118,7 @@ export default function Skills() {
 
   return (
     <section id="skills" className="py-24 bg-[#0a1120] relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-violet-950/5 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-violet-950/5 to-transparent pointer-events-none" />
       <div ref={ref} className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className={`text-center mb-16 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
@@ -127,18 +134,24 @@ export default function Skills() {
           </p>
         </div>
 
-        {/* Tech stack icons */}
-        <div className={`flex flex-wrap justify-center gap-4 mb-16 transition-all duration-700 delay-100 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+        {/* Tech stack — logos depuis /assets */}
+        <div className={`flex flex-wrap justify-center gap-4 sm:gap-5 mb-16 transition-all duration-700 delay-100 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           {techStack.map((tech, i) => (
             <div
-              key={i}
+              key={tech.name}
               className="group flex flex-col items-center gap-2 cursor-default"
               style={{ animationDelay: `${i * 100}ms` }}
             >
-              <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${tech.bg} flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-200`}>
-                <span className="text-white font-bold text-lg">{tech.text}</span>
+              <div className="relative w-16 h-16 sm:w-18 sm:h-18 rounded-2xl bg-white/6 border border-white/10 p-2 shadow-lg group-hover:scale-110 group-hover:border-blue-500/30 group-hover:shadow-blue-500/10 transition-all duration-200">
+                <Image
+                  src={tech.src}
+                  alt={tech.alt}
+                  fill
+                  sizes="72px"
+                  className="object-contain p-1"
+                />
               </div>
-              <span className="text-slate-500 text-xs">{tech.name}</span>
+              <span className="text-slate-500 text-xs font-medium">{tech.name}</span>
             </div>
           ))}
         </div>
